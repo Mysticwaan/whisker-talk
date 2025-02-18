@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 export function Navigation() {
   const sections = [
     { id: "features", label: "Features" },
+    { id: "demo", label: "Demo" },
+    { id: "infographics", label: "How It Works" },
     { id: "technical", label: "Technical" },
     { id: "development", label: "Development" },
     { id: "future", label: "Future" }
@@ -25,7 +27,7 @@ export function Navigation() {
           <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
             Whisker Talk
           </h1>
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-4 overflow-x-auto">
             {sections.map(section => (
               <Button 
                 key={section.id}
