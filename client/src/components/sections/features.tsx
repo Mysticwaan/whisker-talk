@@ -1,20 +1,53 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { ImageCard } from "@/components/ui/image-card";
-import { Mic, Brain, Radio, Database, Smartphone } from "lucide-react";
+import { 
+  Thermometer, 
+  Heart, 
+  Activity, 
+  Scale, 
+  Wind, 
+  Navigation, 
+  Monitor 
+} from "lucide-react";
 
 export function Features() {
   const features = [
-    { icon: <Mic className="h-6 w-6" />, title: "Real-time vocalization analysis", 
-      description: "Advanced audio processing for instant cat communication interpretation" },
-    { icon: <Brain className="h-6 w-6" />, title: "Behavioral pattern recognition",
-      description: "AI-powered analysis of feline behavior patterns" },
-    { icon: <Radio className="h-6 w-6" />, title: "Custom wearable device integration",
-      description: "Seamless connection with our specialized pet wearables" },
-    { icon: <Database className="h-6 w-6" />, title: "Multi-modal data processing",
-      description: "Comprehensive analysis of audio, visual, and behavioral data" },
-    { icon: <Smartphone className="h-6 w-6" />, title: "User-friendly mobile interface",
-      description: "Intuitive mobile app for real-time insights" }
+    { 
+      icon: <Thermometer className="h-6 w-6" />, 
+      title: "Temperature Monitoring", 
+      description: "Non-contact infrared temperature measurement for patient safety" 
+    },
+    { 
+      icon: <Heart className="h-6 w-6" />, 
+      title: "Vital Signs Tracking",
+      description: "Continuous monitoring of heart rate and SpO2 levels" 
+    },
+    { 
+      icon: <Activity className="h-6 w-6" />, 
+      title: "Blood Pressure Analysis",
+      description: "Automated blood pressure measurement and tracking" 
+    },
+    { 
+      icon: <Scale className="h-6 w-6" />, 
+      title: "Weight & BMI Calculation",
+      description: "Precise weight monitoring with instant BMI calculations" 
+    },
+    { 
+      icon: <Wind className="h-6 w-6" />, 
+      title: "Environmental Monitoring",
+      description: "Real-time air quality and environmental assessment" 
+    },
+    { 
+      icon: <Navigation className="h-6 w-6" />, 
+      title: "LiDAR Navigation",
+      description: "Advanced mobility with precise spatial awareness" 
+    },
+    { 
+      icon: <Monitor className="h-6 w-6" />, 
+      title: "Interactive Interface",
+      description: "User-friendly display for patient interaction" 
+    }
   ];
 
   return (
@@ -25,11 +58,11 @@ export function Features() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-blue-500 to-cyan-500 bg-clip-text text-transparent">
           Key Features
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="grid grid-cols-1 gap-4">
             {features.map((feature, index) => (
               <motion.div
@@ -40,7 +73,7 @@ export function Features() {
                 viewport={{ once: true }}
               >
                 <motion.div
-                  whileHover={{ scale: 1.02, backgroundColor: "var(--primary-light)" }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
@@ -71,15 +104,15 @@ export function Features() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="space-y-4 sticky top-24"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <ImageCard
-                src="https://images.unsplash.com/photo-1450778869180-41d0601e046e"
-                alt="Wearable Device"
+                src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634"
+                alt="Medical Monitoring"
                 className="w-full"
               />
             </motion.div>
@@ -88,8 +121,8 @@ export function Features() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <ImageCard
-                src="https://images.unsplash.com/photo-1494256997604-768d1f608cac"
-                alt="Smart Pet Tech"
+                src="https://images.unsplash.com/photo-1666214280133-c53dd04f0f46"
+                alt="Healthcare Robot"
                 className="w-full"
               />
             </motion.div>
